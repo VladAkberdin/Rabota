@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label фамилия_Label;
             System.Windows.Forms.Label имяLabel;
             System.Windows.Forms.Label отчествоLabel;
             System.Windows.Forms.Label дата_рожденияLabel;
             System.Windows.Forms.Label адресLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.database1DataSet = new Rabota.Database1DataSet();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableTableAdapter = new Rabota.Database1DataSetTableAdapters.TableTableAdapter();
             this.tableAdapterManager = new Rabota.Database1DataSetTableAdapters.TableAdapterManager();
             this.tableBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.tableBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.фамилия_TextBox = new System.Windows.Forms.TextBox();
@@ -70,6 +70,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingNavigator)).BeginInit();
             this.tableBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(12, 40);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(20, 13);
+            idLabel.TabIndex = 1;
+            idLabel.Text = "Id:";
+            // 
+            // фамилия_Label
+            // 
+            фамилия_Label.AutoSize = true;
+            фамилия_Label.Location = new System.Drawing.Point(12, 68);
+            фамилия_Label.Name = "фамилия_Label";
+            фамилия_Label.Size = new System.Drawing.Size(62, 13);
+            фамилия_Label.TabIndex = 3;
+            фамилия_Label.Text = "Фамилия :";
+            // 
+            // имяLabel
+            // 
+            имяLabel.AutoSize = true;
+            имяLabel.Location = new System.Drawing.Point(12, 96);
+            имяLabel.Name = "имяLabel";
+            имяLabel.Size = new System.Drawing.Size(32, 13);
+            имяLabel.TabIndex = 5;
+            имяLabel.Text = "Имя:";
+            // 
+            // отчествоLabel
+            // 
+            отчествоLabel.AutoSize = true;
+            отчествоLabel.Location = new System.Drawing.Point(12, 124);
+            отчествоLabel.Name = "отчествоLabel";
+            отчествоLabel.Size = new System.Drawing.Size(58, 13);
+            отчествоLabel.TabIndex = 7;
+            отчествоLabel.Text = "Отчество:";
+            // 
+            // дата_рожденияLabel
+            // 
+            дата_рожденияLabel.AutoSize = true;
+            дата_рожденияLabel.Location = new System.Drawing.Point(12, 153);
+            дата_рожденияLabel.Name = "дата_рожденияLabel";
+            дата_рожденияLabel.Size = new System.Drawing.Size(93, 13);
+            дата_рожденияLabel.TabIndex = 9;
+            дата_рожденияLabel.Text = "Дата рождения:";
+            // 
+            // адресLabel
+            // 
+            адресLabel.AutoSize = true;
+            адресLabel.Location = new System.Drawing.Point(12, 180);
+            адресLabel.Name = "адресLabel";
+            адресLabel.Size = new System.Drawing.Size(41, 13);
+            адресLabel.TabIndex = 11;
+            адресLabel.Text = "Адрес:";
             // 
             // database1DataSet
             // 
@@ -121,6 +175,31 @@
             this.tableBindingNavigator.TabIndex = 0;
             this.tableBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(46, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -148,22 +227,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(46, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -171,7 +244,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -180,49 +253,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // tableBindingNavigatorSaveItem
             // 
             this.tableBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tableBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tableBindingNavigatorSaveItem.Image")));
             this.tableBindingNavigatorSaveItem.Name = "tableBindingNavigatorSaveItem";
-            this.tableBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.tableBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.tableBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.tableBindingNavigatorSaveItem.Click += new System.EventHandler(this.TableBindingNavigatorSaveItem_Click);
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(12, 40);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(20, 13);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "Id:";
             // 
             // idTextBox
             // 
@@ -232,15 +278,6 @@
             this.idTextBox.Size = new System.Drawing.Size(200, 22);
             this.idTextBox.TabIndex = 2;
             // 
-            // фамилия_Label
-            // 
-            фамилия_Label.AutoSize = true;
-            фамилия_Label.Location = new System.Drawing.Point(12, 68);
-            фамилия_Label.Name = "фамилия_Label";
-            фамилия_Label.Size = new System.Drawing.Size(62, 13);
-            фамилия_Label.TabIndex = 3;
-            фамилия_Label.Text = "Фамилия :";
-            // 
             // фамилия_TextBox
             // 
             this.фамилия_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Фамилия ", true));
@@ -248,15 +285,6 @@
             this.фамилия_TextBox.Name = "фамилия_TextBox";
             this.фамилия_TextBox.Size = new System.Drawing.Size(200, 22);
             this.фамилия_TextBox.TabIndex = 4;
-            // 
-            // имяLabel
-            // 
-            имяLabel.AutoSize = true;
-            имяLabel.Location = new System.Drawing.Point(12, 96);
-            имяLabel.Name = "имяLabel";
-            имяLabel.Size = new System.Drawing.Size(32, 13);
-            имяLabel.TabIndex = 5;
-            имяLabel.Text = "Имя:";
             // 
             // имяTextBox
             // 
@@ -266,31 +294,13 @@
             this.имяTextBox.Size = new System.Drawing.Size(200, 22);
             this.имяTextBox.TabIndex = 6;
             // 
-            // отчествоLabel
-            // 
-            отчествоLabel.AutoSize = true;
-            отчествоLabel.Location = new System.Drawing.Point(12, 124);
-            отчествоLabel.Name = "отчествоLabel";
-            отчествоLabel.Size = new System.Drawing.Size(58, 13);
-            отчествоLabel.TabIndex = 7;
-            отчествоLabel.Text = "Отчество:";
-            // 
             // отчествоTextBox
             // 
             this.отчествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tableBindingSource, "Отчество", true));
-            this.отчествоTextBox.Location = new System.Drawing.Point(111, 121);
+            this.отчествоTextBox.Location = new System.Drawing.Point(94, 205);
             this.отчествоTextBox.Name = "отчествоTextBox";
             this.отчествоTextBox.Size = new System.Drawing.Size(200, 22);
             this.отчествоTextBox.TabIndex = 8;
-            // 
-            // дата_рожденияLabel
-            // 
-            дата_рожденияLabel.AutoSize = true;
-            дата_рожденияLabel.Location = new System.Drawing.Point(12, 153);
-            дата_рожденияLabel.Name = "дата_рожденияLabel";
-            дата_рожденияLabel.Size = new System.Drawing.Size(93, 13);
-            дата_рожденияLabel.TabIndex = 9;
-            дата_рожденияLabel.Text = "Дата рождения:";
             // 
             // дата_рожденияDateTimePicker
             // 
@@ -299,15 +309,6 @@
             this.дата_рожденияDateTimePicker.Name = "дата_рожденияDateTimePicker";
             this.дата_рожденияDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.дата_рожденияDateTimePicker.TabIndex = 10;
-            // 
-            // адресLabel
-            // 
-            адресLabel.AutoSize = true;
-            адресLabel.Location = new System.Drawing.Point(12, 180);
-            адресLabel.Name = "адресLabel";
-            адресLabel.Size = new System.Drawing.Size(41, 13);
-            адресLabel.TabIndex = 11;
-            адресLabel.Text = "Адрес:";
             // 
             // адресTextBox
             // 
